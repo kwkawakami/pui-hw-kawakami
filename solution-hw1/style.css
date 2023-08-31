@@ -1,3 +1,57 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 5px;
+    color: black;
+}
 hr{
-    height = "70px"
+   border: none;
+    height: 2px;
+    background-color:black;
+}
+#logoNav{
+    width: auto;
+    height: 150px;
+}
+.itemsID{
+    width: 400px;
+    height: auto;
+    border: 2px solid black;
+
+}
+.center{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    
+} 
+p{
+    font-family: 'Courier New', Courier, monospace
+}
+#itemDescription{
+    text-align: left;
+}
+#center{
+    text-align: center;
+    margin: 20px;
+}
+#fontHighlight{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: yellow;
+    color: black;
+}
+a{
+    text-decoration-line: none;
+}
+#cartLink{
+    margin: 20px;
+    display: block;
+}
+section:hover {
+    background-color: yellow;
+}
+section{
+    padding: auto;
 }
