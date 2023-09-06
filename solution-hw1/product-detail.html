@@ -8,37 +8,57 @@
 
   <body>
     <hr>
-        <img src="../assets/logo/logo-01.svg"
-      width = "200px"
-      height = auto/>
-    <hr>
-    <h1>Products</h1>
-    <p>cart</p>
-
-    <img src="../assets/products/original-cinnamon-roll.jpg"
-    width = "400px"
-      height = auto/>
-    <p> Customize our delicious, hand-made cinnamon roll to your liking</p>
+      <nav id="logoNav"> 
+        <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav"/></a>
+      </nav> 
+    <hr/>
     
-    <p>Glazing</p>
+    <section id="center">
+        <section id="navSpace">
+          <a href="./index.html" id="navItems">Product</a>
+          <br/>
+        </section>
 
-    <select name="glaze"> 
-        <option value="original">Keep Original</option> 
-        <option value="sugarMilk">Sugar Milk</option> 
-        <option value="vanillaMilk">Vanilla Milk</option> 
-        <option value="doubleChoco">Double Chocolate</option> 
-    </select>
+        <section id="navSpace">
+          <a href="./shopping-cart.html" id="navItemsH">Cart</a>
+        </section>
 
-    <p>Pack Size</p>
 
-    <select name="packSize"> 
-        <option value="1">1</option> 
-        <option value="3">3</option> 
-        <option value="6">6</option> 
-        <option value="12">12</option> 
-    </select>
-    <br>
-    <p style="display: inline;">$2.49</p> <button type="button">Add To Cart</button>
+    <img class="productImage" src="../assets/products/original-cinnamon-roll.jpg"/>
+        <section class="productInfo">
+            <p> Customize our delicious, hand-made cinnamon roll to your liking</p>
+            
+            <p>Glazing</p>
+
+            <select class="productDrop" name="glaze"> 
+              <option value="original">Keep Original</option> 
+              <option value="sugarMilk">Sugar Milk</option> 
+              <option value="vanillaMilk">Vanilla Milk</option> 
+              <option value="doubleChoco">Double Chocolate</option> 
+            </select>
+
+            <p>Pack Size</p>
+
+            <select class="productDrop" name="packSize"> 
+                <option value="1">1</option> 
+                <option value="3">3</option> 
+                <option value="6">6</option> 
+                <option value="12">12</option> 
+            </select>
+
+
+            <section class="cartAdd">
+              <p class="price">$2.49</p> <button class="cartButton">Add To Cart</button>
+            </section>
+            
+            
+
+        </section>
+
+
+
+         
+  </section>
 
   </body>
 </html>

@@ -1,5 +1,6 @@
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
     font-size: 15px;
     line-height: 5px;
     color: black;
@@ -13,17 +14,14 @@ hr{
     width: auto;
     height: 150px;
 }
-.itemsID{
-    width: 400px;
-    height: auto;
-    border: 2px solid black;
-
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
 }
 .center{
     margin: auto;
     width: 50%;
-    padding: 10px;
-    
+    padding: 10px;  
 } 
 p{
     font-family: 'Courier New', Courier, monospace
@@ -35,23 +33,104 @@ p{
     text-align: center;
     margin: 20px;
 }
-#fontHighlight{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: larger;
-    font-weight: bolder;
-    background-color: yellow;
-    color: black;
+.centerMe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-a{
-    text-decoration-line: none;
+.img-with-text {
+    text-align: justify;
+    width: 400px;
+    border: 2px solid black;
+
 }
-#cartLink{
-    margin: 20px;
+.img-with-text img {
     display: block;
+    margin: 0 auto;
 }
-section:hover {
+.images{
+    margin: 70px;
+    width: 400px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.images:hover{
+    width: 400px;
+    height: 500px;
+    border-top: 10px solid yellow;
+    border-left: 10px solid yellow;
+    border-right: 10px solid yellow;
+    background: yellow;
+}
+#navItems{
+    font-size: 150%;
+    font-weight: 100;
+    text-decoration: none;
+    color: black;
+    border-top: 100px;
+}
+#navItemsH{
+    font-size: 200%;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
     background-color: yellow;
 }
-section{
-    padding: auto;
+#navSpace{
+    margin-top: 30px;
+}
+.cartStart{
+    margin-top: 60px;
+}
+.cartImages{
+    width: 150px;
+    height: auto;
+    text-align: center;
+    border: 2px solid black;
+}
+#productImg{
+    border: 2px solid black;
+}
+.shortRule{
+    width: 65%;
+}
+button{
+   border: 1px solid black;
+   background: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 10%;
+    height: 5%
+}
+.productImage{
+    margin: 50px;
+    width: 400px;
+    height: auto;
+    border: 2px solid black;
+
+}
+.productInfo{
+    width: 250px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: normal;
+}
+.productDrop{
+    width: 250px;
+    border: 2px solid black;
+}
+.cartAdd{
+    display: flex;
+    float: right;
+    margin: 0;
+}
+.cartButton{
+    width: auto;
+    margin-top: 15px;
+    margin-left: 10px;
 }
