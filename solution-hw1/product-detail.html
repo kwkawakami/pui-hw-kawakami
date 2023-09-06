@@ -8,37 +8,37 @@
 
   <body>
     <hr>
-      <nav id="logoNav"> 
-        <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav"/></a>
+      <nav> 
+        <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav" alt="Bun Bun Logo"/></a>
       </nav> 
     <hr/>
     
-    <section id="center">
-        <section id="navSpace">
-          <a href="./index.html" id="navItems">Product</a>
-          <br/>
-        </section>
+    <div id="center">
+      <div id="productSpace">
+        <a href="./index.html" id="navItems">Product</a>
+        <br/>
+      </div>
 
-        <section id="navSpace">
-          <a href="./shopping-cart.html" id="navItemsH">Cart</a>
-        </section>
+      <div id="navSpace">
+        <a href="./shopping-cart.html" id="navItemsH">Cart</a>
+      </div>
 
 
               <!-- product detail area start -->
 
 
-    <img class="productImage" src="../assets/products/original-cinnamon-roll.jpg"/>
+      <img class="productImage" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
         <section class="productInfo">
-            <p> Customize our delicious, hand-made cinnamon roll to your liking</p>
-            
-            <p>Glazing</p>
+            <h2> Customize our delicious, hand-made cinnamon roll to your liking</h2>
+              
+            <h2>Glazing</h2>
 
-            <!-- 
-              source:
-              https://blog.hubspot.com/website/html-dropdown 
-            
-              **used this to reference how to make a drop-down selector
-            -->
+              <!-- 
+                source:
+                https://blog.hubspot.com/website/html-dropdown 
+              
+                **used this to reference how to make a drop-down selector
+              -->
 
             <select class="productDrop" name="glaze"> 
               <option value="original">Keep Original</option> 
@@ -50,26 +50,18 @@
             <p>Pack Size</p>
 
             <select class="productDrop" name="packSize"> 
-                <option value="1">1</option> 
-                <option value="3">3</option> 
-                <option value="6">6</option> 
-                <option value="12">12</option> 
+              <option value="1">1</option> 
+              <option value="3">3</option> 
+              <option value="6">6</option> 
+              <option value="12">12</option> 
             </select>
 
 
             <section class="cartAdd">
-              <p class="price">$2.49</p> <button class="cartButton">Add To Cart</button>
+              <h2 class="price">$2.49</h2> <button class="cartButton">Add To Cart</button>
             </section>
-            
-            
-
         </section>
-
-
-      <!-- shopping care area end -->
-
-         
-  </section>
-
+      <!-- shopping care area end -->   
+    </div>
   </body>
 </html>

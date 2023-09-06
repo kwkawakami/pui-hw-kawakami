@@ -13,6 +13,14 @@ https://www.geeksforgeeks.org/how-to-change-the-thickness-of-hr-tag-using-css/
 **used this to figure out how to change the hr height and change its color**
 
 */
+h2{
+    font-weight: lighter;
+    font-size: 90%;
+}
+h3{
+    font-weight: normal;
+    font-size: 85%;
+}
 hr{
    border: none;
     height: 2px;
@@ -29,18 +37,22 @@ https://www.w3schools.com/css/css_dimension.asp
     width: auto;
     height: 150px;
 }
+
 h1{
     font-size: 30px;
 }
+
 .center{
     margin: auto;
     width: 50%;
     padding: 10px;  
 } 
+
 #center{
     text-align: center;
     margin: 20px;
 }
+
 .img-with-text {
     text-align: justify;
     width: 400px;
@@ -64,6 +76,7 @@ https://www.w3schools.com/css/css_align.asp
     margin-left: auto;
     margin-right: auto;
 }
+
 .images:hover{
     width: 400px;
     height: 500px;
@@ -72,6 +85,7 @@ https://www.w3schools.com/css/css_align.asp
     border-right: 10px solid yellow;
     background: yellow;
 }
+
 #navItems{
     font-size: 150%;
     font-weight: 100;
@@ -79,6 +93,7 @@ https://www.w3schools.com/css/css_align.asp
     color: black;
     border-top: 100px;
 }
+
 #navItemsH{
     font-size: 200%;
     font-weight: bold;
@@ -86,6 +101,11 @@ https://www.w3schools.com/css/css_align.asp
     color: black;
     background-color: yellow;
 }
+
+#productSpace{
+    margin-top: 30px;
+}
+
 #navSpace{
     margin-top: 30px;
 }
@@ -98,12 +118,15 @@ https://www.w3schools.com/css/css_align.asp
     text-align: center;
     border: 2px solid black;
 }
+
 #productImg{
     border: 2px solid black;
 }
+
 .shortRule{
     width: 65%;
 }
+
 button{
    border: 1px solid black;
    background: yellow;
@@ -119,6 +142,7 @@ button{
     border: 2px solid black;
 
 }
+
 .productInfo{
     width: 250px;
     height: 200px;
@@ -128,15 +152,18 @@ button{
     text-align: left;
     line-height: normal;
 }
+
 .productDrop{
     width: 250px;
     border: 2px solid black;
 }
+
 .cartAdd{
     display: flex;
     float: right;
     margin: 0;
 }
+
 .cartButton{
     width: auto;
     margin-top: 15px;
