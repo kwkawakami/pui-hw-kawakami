@@ -1,132 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>  
-    <meta charset="UTF-8"> 
-    <link rel="stylesheet" type="text/css" href="./style.css" /> 
-    <title>Bun Bun Bake Shop</title>
-  </head>
-  
-  <body>
-    <!--Nav Beginning-->
-    <div class="headFlex">
-        <nav> 
-          <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav" alt="Bun Bun Logo"/></a>
-        </nav> 
+<head>  
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" type="text/css" href="./style.css" /> 
+  <title>Bun Bun Bake Shop</title>
+</head>
+<body>
+  <!--Nav Beginning-->
+  <div class="headFlex">
+    <nav> 
+      <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav" alt="Bun Bun Logo"/></a>
+    </nav> 
 
-      <div class="center">
-
-        <div class="navFlex">
-          <div>
-            <a href="./index.html" class="currentPage">Product</a>
-          </div>
-          <div>
-            <a href="./shopping-cart.html" class="otherPage">Cart</a>
-          </div>
-        </div>
-
+    <div class="center">
+      <div class="navFlex">
         <div>
-        <hr/>
+          <a href="./index.html" class="currentPage">Product</a>
         </div>
+        <div>
+          <a href="./shopping-cart.html" class="otherPage">Cart</a>
+        </div>
+      </div>
 
-          <div class="tagline">
-            <h1> Our Handmade Cinnamon Rolls</h1>
-          </div>
-        </div>
+      <div>
+        <hr/>
+      </div>
+
+      <div class="tagline">
+        <h1> Our Handmade Cinnamon Rolls</h1>
       </div>
     </div>
-      <!-- This is the bginning of the product code -->
-        <section class="productGallery">
+  </div>
+  <!--Nav End-->
 
-          <div class="productDiv">
-            <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
-              <h2>Our Handmade Cinnamon Roll</h2>
-              <h3>$2.49</h3>
-            </a>
-          </div>
+  <!-- This is the beginning of the product code -->
 
+    <!-- 
+    source:
+    https://www.w3schools.com/html/html_images.asp 
 
-          
-          <div class="productDiv">
-            <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/apple-cinnamon-roll.jpg" alt="Apple Cinnamon Roll"/>
-              <h2>Apple Cinnamon Roll</h2>
-              <h3>$3.49</h3>
-            </a>
-          </div>
+    **used this to figure out how to use an image as a link
+  -->
 
-          <div class="productDiv">
-            <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double-Chocolate Cinnamon Roll"/>
-              <h2>Double-Chocolate Cinnamon Roll</h2>
-              <h3>$2.99</h3>
-            </a>
-          </div>
+  <!--Product Area-->
 
-          <div class="productDiv">
-            <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/gluten-free-cinnamon-roll.jpg" alt="Gluten-Free Cinnamon Roll"/>
-              <h2>Gluten-Free Cinnamon Roll</h2>
-              <h3>$3.49</h3>
-            </a>
-          </div>
+  <section class="productGallery">
+    <div class="productDiv">
+      <a href="./product-detail.html">
+        <img src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+        <h2>Our Handmade Cinnamon Roll</h2>
+        <h3>$2.49</h3>
+      </a>
+    </div>
 
+    <div class="productDiv">
+      <a href="./product-detail.html">
+        <img src="../assets/products/apple-cinnamon-roll.jpg" alt="Apple Cinnamon Roll"/>
+        <h2>Apple Cinnamon Roll</h2>
+        <h3>$3.49</h3>
+      </a>
+    </div>
 
-          <div class="productDiv">
-            <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/raisin-cinnamon-roll.jpg" alt="Raisin Cinnamon Roll"/>
-              <h2>Raisin Cinnamon Roll</h2>
-              <h3>$3.99</h3>
-            </a>
-          </div>
+    <div class="productDiv">
+      <a href="./product-detail.html">
+        <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double-Chocolate Cinnamon Roll"/>
+        <h2>Double-Chocolate Cinnamon Roll</h2>
+        <h3>$2.99</h3>
+      </a>
+    </div>
 
-          <div class="productDiv">
-            <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/strawberry-cinnamon-roll.jpg" alt="Strawberry Cinnamon Roll"/>
-              <h2>Strawberry Cinnamon Roll</h2>
-              <h3>$3.99</h3>
-            </a>
-          </div>
+    <div class="productDiv">
+      <a href="./product-detail.html">
+        <img src="../assets/products/gluten-free-cinnamon-roll.jpg" alt="Gluten-Free Cinnamon Roll"/>
+        <h2>Gluten-Free Cinnamon Roll</h2>
+        <h3>$3.49</h3>
+      </a>
+    </div>
 
+    <div class="productDiv">
+      <a href="./product-detail.html">
+        <img src="../assets/products/raisin-cinnamon-roll.jpg" alt="Raisin Cinnamon Roll"/>
+        <h2>Raisin Cinnamon Roll</h2>
+        <h3>$3.99</h3>
+      </a>
+    </div>
 
-            <!-- <div>
-              <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/vanilla-cinnamon-roll.jpg" alt="Vanilla Cinnamon Roll"/>
-              <h2>Vanilla Cinnamon Roll</h2>
-              <h3>$2.49</h3>
-              </a>
-            </div>
-
-            <div>
-              <a href="./product-detail.html">
-              <img id="productImage" src="../assets/products/walnut-cinnamon-roll.jpg" alt="Walnut Cinnamon Roll"/>
-              <h2>Walnut Cinnamon Roll</h2>
-              <h3>$2.49</h3>
-              </a>
-            </div> -->
-
-        </section>
+    <div class="productDiv">
+      <a href="./product-detail.html">
+        <img src="../assets/products/strawberry-cinnamon-roll.jpg" alt="Strawberry Cinnamon Roll"/>
+        <h2>Strawberry Cinnamon Roll</h2>
+        <h3>$3.99</h3>
+      </a>
+    </div>
+  </section>
 
 
-        
-
-      </div>
-
-    </section>
-
-
-    <!--Nav End-->
-
-    <!--Product Area-->
-      
-<!-- 
-  source:
-  https://www.w3schools.com/html/html_images.asp 
-
-**used this to figure out how to use an image as a link
--->
-      
-
-    <!--Product Area End-->
-  </body>
+  <!--Product Area End-->
+</body>
 </html>

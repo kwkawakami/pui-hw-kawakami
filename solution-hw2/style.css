@@ -5,10 +5,12 @@ body{
     line-height: 5px;
     color: black;
 }
+
 a{
     color: black;
     text-decoration-line: none;
 }
+
 h2{
     text-align: left;
     font-weight: lighter;
@@ -18,28 +20,48 @@ h2{
     margin-bottom: 4%;
     font-size: 120%;
 }
+
 h3{
     margin-top: 30px;
     font-weight: lighter;
     line-height: 100%;
     margin-bottom:5px;
-    font-size: auto;
-
 }
+
 h4{
     font-size: 80%;
     text-decoration: underline black;
 }
+
 h5{
     font-size: 120%;
     margin: 20px;
     font-weight: lighter;
     line-height:2px;
 }
+
+/* 
+
+source:
+https://www.w3schools.com/css/css_dimension.asp 
+
+**used this to set the size of the logo as well as the product photos**
+*/
+
 #logoNav{
     width: 400px;
     height: auto;
 }
+
+/* 
+
+source:
+https://www.geeksforgeeks.org/how-to-change-the-thickness-of-hr-tag-using-css/
+
+**used this to figure out how to change the hr height and change its color**
+
+*/
+
 hr{
     height: 2px;
     background-color: black;
@@ -52,6 +74,17 @@ hr{
     margin-top: 20px;
     margin-left: 10px;
 }
+
+/* 
+
+source:
+https://www.w3schools.com/css/css_align.asp 
+
+**helped me center .images as well as other css elements**
+
+*/
+
+
 .center{
     display: flex;
     flex-direction: column;
@@ -61,10 +94,11 @@ hr{
     width: 100%;
     height: auto;
 }
+
 .center div{
     margin-top:2%;
-
 }
+
 .currentPage{
     font-weight: bolder;
     font-size: 140%;
@@ -72,13 +106,16 @@ hr{
     margin-right: 50px;
     background-color: yellow;
 }
+
 .navFlex{
     display: flex;
     justify-content: flex-end;
 }
+
 .otherPage{
     margin-right: 50px;
 }
+
 .tagline{
     margin-top: 200%;
     text-align: left;
@@ -94,6 +131,7 @@ hr{
     width: 1000px;
     align-items: center;
 }
+
 .productDiv img{
     display: block;
     width: 100%;
@@ -101,18 +139,18 @@ hr{
     margin: auto;
     border: 3px solid black;
 }
+
 .productDiv{
     flex: 1 1 200px;
     margin: 30px;
     border: 10px solid transparent;
     border-right: 15px solid transparent;
-
 }
+
 .productDiv:hover{
     background-color: yellow;
     border: 10px solid yellow;
     border-right: 15px solid yellow;
-
 }
 
 
@@ -124,11 +162,13 @@ hr{
     align-items: center;
     margin: 50px;
 }
+
 .detailFlex img{
     width: 700px;
     height: auto;
     border: 3px solid black;
 }
+
 .productMenu{
     display: flex;
     flex-direction: column;
@@ -137,25 +177,30 @@ hr{
     height: auto;
     margin-right: 80px;
 }
+
 .productDetails{
     margin: 30px auto 40px;
     width: 55%;
-    align-items: left;
 }
+
 .productDetails{
     text-align: left;
 }
+
 #productTitle{
     font-size: 180%;
     margin-top: 50px;
 }
+
 .productDrop{
     width: 100%;
     border: 2px solid black;
 }
+
 .menuSelection{
     margin:20px 0px 20px;
 }
+
 .cartAdd{
     margin-left: auto;
     justify-content: right;
@@ -164,6 +209,7 @@ hr{
     align-items: baseline;
     height: 30%;
 }
+
 .cartButton{
     font-weight: bolder;
     margin-left: 10px;
@@ -179,11 +225,13 @@ hr{
     height: auto;
     border: 2px solid black;
 }
+
 .cartProductDetails{
     margin-top: 0px;
     line-height: 5px;
     width: 300px
 }
+
 .checkoutButton{
     align-content: end;
     font-weight: bolder;
@@ -192,61 +240,43 @@ hr{
     width: 20%;
     height: 35px;
 }
+
 .itemPrice{
     width: 100px;
 }
+
 .checkoutParent{
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
+
 .checkoutButtonParent{
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
 }
+
 .totalParent{
     display:flex;
     justify-content: flex-end;
     gap: 400px;
 }
+
 .cartAlign{
     align-content: space-around;
     align-items:center;
 }
+
 #shoppingTagline{
     margin-top: 50px;
     text-align: left;
 }
+
 .navHr{
     margin-top: 100px;
 }
+
 .margin{
     width: 400px;
 }
-
-/* 
-
-source:
-https://www.geeksforgeeks.org/how-to-change-the-thickness-of-hr-tag-using-css/
-
-**used this to figure out how to change the hr height and change its color**
-
-*/
-
-/* 
-
-source:
-https://www.w3schools.com/css/css_dimension.asp 
-
-**used this to set the size of the logo as well as the product photos**
-*/
-
-/* 
-
-source:
-https://www.w3schools.com/css/css_align.asp 
-
-**helped me center .images as well as other css elements**
-
-*/
