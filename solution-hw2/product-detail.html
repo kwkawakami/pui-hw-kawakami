@@ -7,75 +7,79 @@
   </head>
 
   <body>
-    <hr>
+    <div class="headFlex">
       <nav> 
         <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav" alt="Bun Bun Logo"/></a>
       </nav> 
-    <hr/>
-    
+
     <div class="center">
-      <div>
-        <a href="./index.html" class="currentPage">Product</a>
-        <br/>
+
+      <div class="navFlex">
+        <div>
+          <a href="./index.html" class="currentPage">Product</a>
+        </div>
+        <div>
+          <a href="./shopping-cart.html" class="otherPage">Cart</a>
+        </div>
       </div>
 
       <div>
-        <a href="./shopping-cart.html">Cart</a>
+      <hr/>
       </div>
 
-      <div id="productTitle">
-        <h3> Original Cinnamon Roll</h3>
+        <div class="tagline">
+          <h1>Original Cinnamon Roll</h1>
+        </div>
       </div>
     </div>
+  </div>
 
               <!-- product detail area start -->
-
-      <section class="detailCenter">
+      <section class="detailFlex">
 
         <div>
-          <img id="productImage" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+          <img src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
         </div>
 
-        <div class="productDetails">
 
-          <section class="productDescription">
-            <h3> Customize our delicious, hand-made cinnamon roll to your liking</h3>   
-          </section>
 
-          <section class="menuSelection">
-            <h3>Glazing</h3>
-                <!-- 
-                  source:
-                  https://blog.hubspot.com/website/html-dropdown 
-                
-                  **used this to reference how to make a drop-down selector
-                -->
 
-              <select class="productDrop" name="glaze"> 
-                <option value="original">Keep Original</option> 
-                <option value="sugarMilk">Sugar Milk</option> 
-                <option value="vanillaMilk">Vanilla Milk</option> 
-                <option value="doubleChoco">Double Chocolate</option> 
-              </select>
-  
-              <h3>Pack Size</h3>
-  
-              <select class="productDrop" name="packSize"> 
-                <option value="1">1</option> 
-                <option value="3">3</option> 
-                <option value="6">6</option> 
-                <option value="12">12</option> 
-              </select>
-  
-  
-                <section class="cartAdd">
-                  <h3 class="price">$2.49</h3>
-                  <button class="cartButton">Add To Cart</button>
+        <div class="productMenu">
+          <h3> Customize our delicious, hand-made cinnamon roll to your liking</h3>   
+
+                <section class="menuSelection">
+                  <h3>Glazing</h3>
+                      <!-- 
+                        source:
+                        https://blog.hubspot.com/website/html-dropdown 
+                      
+                        **used this to reference how to make a drop-down selector
+                      -->
+
+                    <select class="productDrop" name="glaze"> 
+                      <option value="original">Keep Original</option> 
+                      <option value="sugarMilk">Sugar Milk</option> 
+                      <option value="vanillaMilk">Vanilla Milk</option> 
+                      <option value="doubleChoco">Double Chocolate</option> 
+                    </select>
+        
+                    <h3>Pack Size</h3>
+        
+                    <select class="productDrop" name="packSize"> 
+                      <option value="1">1</option> 
+                      <option value="3">3</option> 
+                      <option value="6">6</option> 
+                      <option value="12">12</option> 
+                    </select>
+        
+        
+                      <section class="cartAdd">
+                        <h3 class="price">$2.49</h3>
+                        <button class="cartButton">Add To Cart</button>
+                      </section>
                 </section>
-          </section>
-              
-          </section>
-        </div>
+            
+
       </section>
       <!-- shopping care area end -->   
   </body>
