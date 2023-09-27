@@ -216,7 +216,7 @@ https://www.w3schools.com/css/css_align.asp
     height: 30%;
 }
 
-.cartButton{
+#cartButton{
     font-weight: bolder;
     margin-left: 10px;
     background-color: yellow;
