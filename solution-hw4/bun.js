@@ -48,13 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(queryString);
     const rollType = params.get("roll");
 
+
     // Edit Header Based on Array
     const headerElement = document.querySelector('#rollName');
     headerElement.innerText = rollType + " Cinnamon Roll";
 
     // Edit Image Based on Array
     const rollImage = document.querySelector('#roll-img');
-    rollImage.src = '../assets/products/' + rollType +"-cinnamon-roll.jpg";
+    rollImage.src = "../assets/products/"+rollType.toLowerCase()+"-cinnamon-roll.jpg";
 
     // Edit Price Based on the rolls array
     const bunPrice = document.querySelector('#totalPrice');
