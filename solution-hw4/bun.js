@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Edit Image Based on Array
     const rollImage = document.querySelector('#roll-img');
-    let cor_name = rollType.toLowerCase();
-    rollImage.src = "../assets/products/" + cor_name + "-cinnamon-roll.jpg";
+    let lcName = rollType.toLowerCase();
+    rollImage.src = "../assets/products/" + lcName + "-cinnamon-roll.jpg";
 
     // Edit Price Based on the rolls array
     const bunPrice = document.querySelector('#totalPrice');
