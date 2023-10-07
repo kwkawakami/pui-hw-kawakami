@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./style.css" /> 
+    <title>Bun Bun Bake Shop</title>
+</head>
+<body>    
+    <div class="headFlex">
+        <nav> 
+            <a href="./index.html"><img src="../assets/logo/logo-01.svg" id="logoNav" alt="Bun Bun Logo"/></a>
+        </nav> 
+        <div class="center">
+            <div class="navFlex">
+                <div>
+                    <a href="./index.html" class="currentPage">Product</a>
+                </div>
+                <div>
+                    <a href="./shopping-cart.html" class="otherPage">Cart</a>
+                </div>
+            </div>
+            <div>
+                <hr/>
+            </div>
+            <div class="tagline">
+                <h1 id="rollName">Original Cinnamon Roll</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="detailFlex">
+        <div>
+            <img id= "roll-img" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+        </div>
+        <div class="productMenu">
+            <h3> Customize our delicious, hand-made cinnamon roll to your liking</h3>   
+            <section class="menuSelection">
+                <h3>Glazing</h3>
+                <!-- 
+                    source:
+                    https://blog.hubspot.com/website/html-dropdown 
+                    **used this to reference how to make a drop-down selector
+                -->
+                <label for="icing"></label>
+                <select id="icing">
+                    <option value="original">Keep Original</option>
+                    <option value="sugarMilk">Sugar Milk</option>
+                    <option value="vanillaMilk">Vanilla Milk</option>
+                    <option value="doubleChocolate">Double Chocolate</option>
+                </select>
+                <br>
+                
+                <h3>Glazing</h3>
+
+                <label for="quantity"></label>
+                <select id="quantity">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </select>
+                <br>
+                <section class="cartAdd">
+                    <h3 id="totalPrice">$2.49</h3>
+                    <button id="cartButton">Add To Cart</button>
+                </section>
+            </section>
+        </div>
+    </section>
+    <script type="text/javascript" src="../solution-hw4/bun.js"></script>
+    <script type="text/javascript" src="../solution-hw4/rollsData.js"></script>
+</body>
+</html>
