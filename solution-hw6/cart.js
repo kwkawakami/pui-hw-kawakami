@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Create a function to map the original sizes to the desired sizes
     function mapSize(size) {
         const sizeMap = {
             "1": 1,
@@ -7,29 +6,39 @@ document.addEventListener("DOMContentLoaded", function () {
             "6": 5,
             "12": 10
         };
-        return sizeMap[size] || size; // If the size is not in the map, use the original size
+        return sizeMap[size] || size;
     }
 
     class Roll {
         constructor(rollType, rollGlazing, packSize, rollPrice, imageFile) {
             this.type = rollType;
             this.glazing = rollGlazing;
-            this.size = mapSize(packSize); // Map the size
+            this.size = mapSize(packSize);
             this.basePrice = rollPrice;
             this.imageFile = imageFile;
-            this.element = null; // Initialize the element property
+            this.icingPrice = 0; // Default icingPrice is 0
+            this.element = null;
         }
     }
 
     const shoppingCart = new Set();
 
-    function addNewItem(rollType, rollGlazing, packSize, rollPrice, imageFile) {
+    // Function to create an HTML element for a Roll object and calculate the total cost
+    function createElement(rollType, rollGlazing, packSize, rollPrice, imageFile) {
         const roll = new Roll(rollType, rollGlazing, packSize, rollPrice, imageFile);
-        shoppingCart.add(roll);
-        return roll;
-    }
+        
+        // Assign icingPrice based on rollGlazing
+        switch (roll.glazing) {
+            case "vanillaMilk":
+                roll.icingPrice = 0.5;
+                break;
+            case "doubleChocolate":
+                roll.icingPrice = 1.5;
+                break;
+            // For "original" and "sugarMilk", icingPrice remains 0 (already set in the constructor)
+        }
 
-    function createElement(roll) {
+        shoppingCart.add(roll);
         const template = document.querySelector("#checkoutItemsTemplate");
         const clone = template.content.cloneNode(true);
         roll.element = clone.querySelector("#checkoutParent");
@@ -40,84 +49,96 @@ document.addEventListener("DOMContentLoaded", function () {
         const rollListElement = document.querySelector("#checkoutList");
         rollListElement.prepend(roll.element);
         updateElement(roll);
+        saveCartToLocalStorage();
+        recalculateTotalCost();
     }
 
+    // Function to update the HTML element for a Roll object
     function updateElement(roll) {
         const rollImageElement = roll.element.querySelector(".checkoutImages");
         const rollNameElement = roll.element.querySelector("#productName");
         const rollGlazingElement = roll.element.querySelector("#glazingOpt");
         const rollPackSizeElement = roll.element.querySelector("#packSize");
         const rollItemPriceElement = roll.element.querySelector(".itemPrice");
-        rollImageElement.src = "../assets/products/" + roll.imageFile + "-cinnamon-roll.jpg";
+        rollImageElement.src = "../assets/products/" + roll.imageFile;
         rollNameElement.textContent = roll.type + " Cinnamon Roll";
-        rollGlazingElement.textContent = "Glazing: " + roll.glazing;
+        
+        // Format and set roll.glazing in rollGlazingElement
+        let formattedGlazing = roll.glazing;
+        if (roll.glazing === "original") {
+            formattedGlazing = "Original";
+        } else if (roll.glazing === "sugarMilk") {
+            formattedGlazing = "Sugar Milk";
+        } else if (roll.glazing === "vanillaMilk") {
+            formattedGlazing = "Vanilla Milk";
+        } else if (roll.glazing === "doubleChocolate") {
+            formattedGlazing = "Double Chocolate";
+        }
+        rollGlazingElement.textContent = "Glazing: " + formattedGlazing;
+    
         rollPackSizeElement.textContent = "Pack Size: " + roll.size;
-        rollItemPriceElement.textContent = "Price: $" + roll.basePrice;
+    
+        // Calculate the total cost
+        const totalCost = (parseFloat(roll.basePrice) + parseFloat(roll.icingPrice)) * parseFloat(roll.size);
+        rollItemPriceElement.textContent = "Price: $" + totalCost.toFixed(2);
     }
 
+    // Function to add a Roll object to the shopping cart
+    function addRollToCart(rollType, rollGlazing, packSize, rollPrice, imageFile) {
+        createElement(rollType, rollGlazing, packSize, rollPrice, imageFile);
+    }
+
+    // Function to remove a Roll from the shopping cart
     function removeItemFromCart(roll) {
         shoppingCart.delete(roll);
         roll.element.remove();
+        saveCartToLocalStorage();
         recalculateTotalCost();
     }
 
-    const original = addNewItem("Original", "Sugar Milk", "1", "2.49", "original");
-    const walnut = addNewItem("Walnut", "Vanilla Milk", "12", "3.49", "walnut");
-    const raisin = addNewItem("Raisin", "Sugar Milk", "3", "2.99", "raisin");
-    const apple = addNewItem("Apple", "Original", "3", "3.49", "apple");
-
-    const reversedCart = Array.from(shoppingCart).reverse();
-
-    for (const roll of reversedCart) {
-        createElement(roll);
+    // Load cart items from local storage
+    function loadCartFromLocalStorage() {
+        const storedCart = localStorage.getItem('cart');
+        if (storedCart) {
+            const cartArray = JSON.parse(storedCart);
+            for (const item of cartArray) {
+                const { type, glazing, size, basePrice, imageFile } = item;
+                createElement(type, glazing, size, basePrice, imageFile);
+            }
+        }
     }
 
+    // Save the shopping cart to local storage
+    function saveCartToLocalStorage() {
+        const cartArray = Array.from(shoppingCart);
+        localStorage.setItem('cart', JSON.stringify(cartArray));
+    }
+
+    // Function to calculate the total cost of a Roll
     function calculateTotalCost(roll) {
-        let glazingCost = 0;
-
-        switch (roll.glazing) {
-            case "Original":
-                glazingCost = 0;
-                break;
-            case "Sugar Milk":
-                glazingCost = 0;
-                break;
-            case "Vanilla Milk":
-                glazingCost = 0.5;
-                break;
-            case "Double Chocolate":
-                glazingCost = 1.5;
-                break;
-            default:
-                glazingCost = 0;
-        }
-
-        const totalCost = (parseFloat(roll.basePrice) + glazingCost) * parseFloat(roll.size);
+        const totalCost = (parseFloat(roll.basePrice) + parseFloat(roll.icingPrice)) * parseFloat(roll.size);
         return totalCost.toFixed(2);
     }
 
-    for (const roll of reversedCart) {
-        const totalCost = calculateTotalCost(roll);
-        const productElement = roll.element.querySelector(".itemPrice");
-        productElement.innerHTML = "$ " + totalCost;
-    }
-
+    // Function to calculate the total cost of the entire shopping cart
     function calculateTotalCartCost() {
         let totalCartCost = 0;
 
         for (const roll of shoppingCart) {
-            const totalCost = calculateTotalCost(roll);
-            totalCartCost += parseFloat(totalCost);
+            totalCartCost += parseFloat(calculateTotalCost(roll));
         }
 
         return totalCartCost.toFixed(2);
     }
 
+    // Function to update the total cost displayed in the HTML
     function recalculateTotalCost() {
         const totalCartCost = calculateTotalCartCost();
         const totalCostElement = document.querySelector("#cartTotal");
         totalCostElement.textContent = totalCartCost;
     }
 
+    // Load cart items from local storage when the page loads
+    loadCartFromLocalStorage();
     recalculateTotalCost();
 });
